@@ -5,15 +5,70 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+:root {
+    --color-dark: #6B717E;
+    --color-primary: #EFAAC4;
+    --color-prymary-dark-shade: #E887AC;
+    --color-secondary: #FFC4D1;
+    --color-light: #FFE8E1;
+    --color-accent: #D4DCCD;
+}
+
+html {
+    min-width: 350px;
+    background-color: var(--color-secondary);
+}
+
+h1 {
+    color: var(--color-dark);
+    text-align: center;
+}
+
 .container {
+    color: #fff;
     display: block;
-    background: #35c;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .post-card {
-    max-width: 80%;
-    background: #5c3;
+    margin: 8px 0px 0px 0px;
+    padding: 16px 4px;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    max-width: 800px;
+}
+
+.post-card .post-author {
+    padding-left: 16px;
+}
+
+.post-card input {
+    outline: none;
+    border: none;
+}
+
+.post-card .post-content {
+    padding: 10px 20px;
+}
+
+.post-card .comment-section {
+    display: flex;
+    padding: 8px 16px 16px 16px;
+}
+
+.post-card .comment-box {
+    padding: 8px 4px;
+    background-color: var(--color-prymary-dark-shade);
+    flex-grow: 1;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.post-card .comment-send {
+   padding: 8px 0; 
+   width: 76px;
+   color: var(--color-dark);
+   background-color: var(--color-accent);
+   border-radius: 0px 8px 8px 0px;
 }
