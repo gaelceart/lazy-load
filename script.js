@@ -65,8 +65,7 @@ const requestData = async (num) =>{
     }
 }
 
-requestData(4)
-
+requestData(8)
 
 const appendContentTo = (content, parent) => {
     const comment = document.createElement("SECTION");

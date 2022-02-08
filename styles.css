@@ -52,11 +52,6 @@ h3 {
     border: none;
 }
 
-/*
-.post-card .post-content {
-}
-*/
-
 .post-card .comment-section {
     display: flex;
     user-select: none;
@@ -99,6 +94,7 @@ h3 {
     margin-top: 4px;
     padding: 8px;
     background-color: var(--color-primary-light-shade);
+    border-radius: 8px;
 }
 
 @keyframes appear {
