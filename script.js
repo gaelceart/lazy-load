@@ -1,8 +1,9 @@
 "use strict";
 const mainContainer = document.querySelector(".container");
+let indexOfPosts = 0;
+let fullLoad = false;
 
 const createPostCard = (author, post) => {
-    const postCard = new DocumentFragment();
     const section = document.createElement("SECTION");  
     const name = document.createElement("H2");
     const content = document.createElement("DIV");
@@ -32,20 +33,36 @@ const createPostCard = (author, post) => {
     commentSection.appendChild(send);
 
     section.appendChild(commentSection);
-    postCard.appendChild(section);
-    return postCard;
+    return section;
 }
+
+const loadMorePosts = entry => {if (entry[0].isIntersecting) requestData(2)}
+
+const observer = new IntersectionObserver(loadMorePosts);
 
 const requestData = async (num) =>{
     const request = await fetch("posts.txt");
     const content = await request.json();
-    // for(let i=0; i< num; i++) {
-        
-    // }
+    const data = content.data;
+    console.log(data[0].name);
     const newCards = new DocumentFragment;
     for (let i = 0; i < num; i++){
-        newCards.appendChild(createPostCard(content[i].name, content[i].content))
+        console.log(fullLoad)
+        if (data[indexOfPosts] == undefined){ 
+            if (fullLoad) break;
+            let noMorePosts = document.createElement("H3");
+            noMorePosts.textContent = "There are no more posts to load :|";
+            newCards.appendChild(noMorePosts);            
+            mainContainer.appendChild(newCards)
+            fullLoad = true;
+            break;
+        }
+        const card = createPostCard(data[indexOfPosts].name, data[indexOfPosts].content)
+        newCards.appendChild(card)
+        indexOfPosts++;
+        if (i == num-1) observer.observe(card)
+        mainContainer.appendChild(newCards)
     }
-    mainContainer.appendChild(newCards)
 }
-requestData(3)
+
+requestData(4)

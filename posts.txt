@@ -1,4 +1,5 @@
-[
+{
+ "data":   [
     {
         "name": "<ELCHURCHES>",
         "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officiis adipisci porro? Pariatur, repellat alias voluptates voluptas inventore nulla magni culpa temporibus veniam dolores, corporis minus facere soluta rerum libero!"
@@ -10,5 +11,30 @@
     {
         "name": "<ANASHEI>",
         "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officiis adipisci porro? Pariatur, repellat alias voluptates voluptas inventore nulla magni culpa temporibus veniam dolores, corporis minus facere soluta rerum libero!"
+    },
+    {
+        "name": "<SEÑOR BIGOTES>",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officiis adipisci porro? Pariatur, repellat alias voluptates voluptas inventore nulla magni culpa temporibus veniam dolores, corporis minus facere soluta rerum libero!"
+    },
+    {
+        "name": "<PURO HUESO>",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officiis adipisci porro? Pariatur, repellat alias voluptates voluptas inventore nulla magni culpa temporibus veniam dolores, corporis minus facere soluta rerum libero!"
+    },
+    {
+        "name": "<ASH>",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officiis adipisci porro? Pariatur, repellat alias voluptates voluptas inventore nulla magni culpa temporibus veniam dolores, corporis minus facere soluta rerum libero!"
+    },
+    {
+        "name": "<CHARIZARD>",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officiis adipisci porro? Pariatur, repellat alias voluptates voluptas inventore nulla magni culpa temporibus veniam dolores, corporis minus facere soluta rerum libero!"
+    },
+    {
+        "name": "<KAIBA>",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officiis adipisci porro? Pariatur, repellat alias voluptates voluptas inventore nulla magni culpa temporibus veniam dolores, corporis minus facere soluta rerum libero!"
+    },
+    {
+        "name": "<LIGHT>",
+        "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officiis adipisci porro? Pariatur, repellat alias voluptates voluptas inventore nulla magni culpa temporibus veniam dolores, corporis minus facere soluta rerum libero!"
     }
 ]
+}

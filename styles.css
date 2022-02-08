@@ -19,9 +19,8 @@ html {
     background-color: var(--color-secondary);
 }
 
-h1 {
-    color: var(--color-dark);
-    text-align: center;
+h3 {
+    margin: 20px;
 }
 
 .container {
@@ -38,6 +37,9 @@ h1 {
     border-radius: 8px;
     background-color: var(--color-primary);
     max-width: 800px;
+    opacity:0;
+    animation: appear 1s forwards;
+    transition: 1s;
 }
 
 .post-card .post-author {
@@ -59,7 +61,8 @@ h1 {
 }
 
 .post-card .comment-box {
-    padding: 8px 4px;
+    color: var(--color-light);
+    padding: 8px 8px;
     background-color: var(--color-prymary-dark-shade);
     flex-grow: 1;
     border-radius: 8px 0px 0px 8px;
@@ -71,4 +74,8 @@ h1 {
    color: var(--color-dark);
    background-color: var(--color-accent);
    border-radius: 0px 8px 8px 0px;
+}
+
+@keyframes appear {
+    to {opacity: 1;} 
 }
