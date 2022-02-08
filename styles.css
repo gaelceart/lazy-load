@@ -8,7 +8,8 @@
 :root {
     --color-dark: #6B717E;
     --color-primary: #EFAAC4;
-    --color-prymary-dark-shade: #E887AC;
+    --color-primary-dark-shade: #E887AC;
+    --color-primary-light-shade: #F2BAD0;
     --color-secondary: #FFC4D1;
     --color-light: #FFE8E1;
     --color-accent: #D4DCCD;
@@ -32,8 +33,8 @@ h3 {
 }
 
 .post-card {
+    padding: 8px 16px 16px 16px;
     margin: 8px 0px 0px 0px;
-    padding: 16px 4px;
     border-radius: 8px;
     background-color: var(--color-primary);
     max-width: 800px;
@@ -43,7 +44,7 @@ h3 {
 }
 
 .post-card .post-author {
-    padding-left: 16px;
+    padding: 4px 0;
 }
 
 .post-card input {
@@ -51,19 +52,21 @@ h3 {
     border: none;
 }
 
+/*
 .post-card .post-content {
-    padding: 10px 20px;
 }
+*/
 
 .post-card .comment-section {
     display: flex;
-    padding: 8px 16px 16px 16px;
+    user-select: none;
+    padding-top: 8px; 
 }
 
 .post-card .comment-box {
     color: var(--color-light);
     padding: 8px 8px;
-    background-color: var(--color-prymary-dark-shade);
+    background-color: var(--color-primary-dark-shade);
     flex-grow: 1;
     border-radius: 8px 0px 0px 8px;
 }
@@ -73,7 +76,29 @@ h3 {
    width: 76px;
    color: var(--color-dark);
    background-color: var(--color-accent);
-   border-radius: 0px 8px 8px 0px;
+   border-radius: 0px 8px 8px 0px; 
+   transition: filter .25s;
+}
+
+.post-card .comment-send:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+    transition: filter .25s;
+}
+
+.post-card .comment-send:active {
+    cursor: pointer;
+    filter: brightness(.8);
+    transition: filter .25s;
+}
+
+.post-card .comment {
+    display: block;
+    word-wrap: break-word;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px;
+    background-color: var(--color-primary-light-shade);
 }
 
 @keyframes appear {

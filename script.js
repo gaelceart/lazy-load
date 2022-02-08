@@ -66,3 +66,29 @@ const requestData = async (num) =>{
 }
 
 requestData(4)
+
+
+const appendContentTo = (content, parent) => {
+    const comment = document.createElement("SECTION");
+    const name = document.createElement("H5");
+    const text = document.createElement("P");
+
+    comment.classList.add("comment");
+    name.textContent = "YOU"
+    text.textContent = content;
+
+    comment.appendChild(name);
+    comment.append(text);
+    parent.appendChild(comment);
+}
+
+
+document.addEventListener("click", (e) =>{
+    if (e.target && e.target.className ==  "comment-send"){
+        const inputContent = e.target.parentNode.querySelector(".comment-box");
+
+        if (inputContent.value != "") appendContentTo(inputContent.value, e.target.parentNode.parentNode)
+        inputContent.value = "";
+    }
+}) 
+
