@@ -4,3 +4,16 @@
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.container {
+    display: block;
+    background: #35c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-card {
+    max-width: 80%;
+    background: #5c3;
+}
