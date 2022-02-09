@@ -44,10 +44,8 @@ const requestData = async (num) =>{
     const request = await fetch("posts.txt");
     const content = await request.json();
     const data = content.data;
-    console.log(data[0].name);
     const newCards = new DocumentFragment;
     for (let i = 0; i < num; i++){
-        console.log(fullLoad)
         if (data[indexOfPosts] == undefined){ 
             if (fullLoad) break;
             let noMorePosts = document.createElement("H3");
